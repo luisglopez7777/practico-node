@@ -7,8 +7,8 @@ const Controller = require('./index')
 //Routes
 router.get('/', list)
 router.get('/:id', get)
-router.get('/', upsert)
-router.get('/', upsert)
+router.post('/', upsert)
+router.put('/', upsert)
 
 //Internal functions
 function list(req, res) {
