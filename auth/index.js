@@ -19,7 +19,11 @@ const check = {
         if (decoded.id !== owner) {
             throw error('No puedes hacer esto', 401)
         }
+    },
+    logged: function (req) {
+        const decoded = decodeHeader(req)
     }
+
 }
 
 function getToken(auth) {
